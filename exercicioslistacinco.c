@@ -1,11 +1,3 @@
-/*
- * LOGICA DE PROGRAMACAO E ALGORITMOS - GPE17N20094
- * Lista de exercicios - Funcoes e Procedimentos
- *
- * Cada exercicio esta separado em funcoes.
- * O main() mostra um menu para testar qualquer exercicio.
- */
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
