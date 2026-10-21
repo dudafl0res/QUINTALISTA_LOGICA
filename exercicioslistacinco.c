@@ -1,19 +1,18 @@
 /*
- * LÓGICA DE PROGRAMAÇÃO E ALGORITMOS - GPE17N20094
- * Lista de exercícios - Funções e Procedimentos
+ * LOGICA DE PROGRAMACAO E ALGORITMOS - GPE17N20094
+ * Lista de exercicios - Funcoes e Procedimentos
  *
- * Cada exercício está separado em funções.
- * O main() mostra um menu para testar qualquer exercício.
+ * Cada exercicio esta separado em funcoes.
+ * O main() mostra um menu para testar qualquer exercicio.
  */
 
 #include <stdio.h>
 #include <stdlib.h>
-#include <locale.h>
 #include <time.h>
 
 #define PI 3.1414592   /* valor de PI pedido no enunciado */
 
-/* EXERCÍCIO 1 - Retorna o maior entre dois números */
+/* EXERCICIO 1 - Retorna o maior entre dois numeros */
 float maior(float a, float b)
 {
     if (a > b)
@@ -26,22 +25,22 @@ void exercicio1()
 {
     float n1, n2;
 
-    printf("Digite o primeiro número: ");
+    printf("Digite o primeiro numero: ");
     scanf("%f", &n1);
-    printf("Digite o segundo número: ");
+    printf("Digite o segundo numero: ");
     scanf("%f", &n2);
 
-    printf("O maior número é: %.2f\n", maior(n1, n2));
+    printf("O maior numero e: %.2f\n", maior(n1, n2));
 }
 
-/* EXERCÍCIO 2 - Mostra o mês e a quantidade de dias */
+/* EXERCICIO 2 - Mostra o mes e a quantidade de dias */
 void mostraMes(int numero)
 {
     switch (numero)
     {
         case 1:  printf("janeiro - 31 dias\n");   break;
         case 2:  printf("fevereiro - 28 dias (29 em ano bissexto)\n"); break;
-        case 3:  printf("março - 31 dias\n");     break;
+        case 3:  printf("marco - 31 dias\n");     break;
         case 4:  printf("abril - 30 dias\n");     break;
         case 5:  printf("maio - 31 dias\n");      break;
         case 6:  printf("junho - 30 dias\n");     break;
@@ -51,7 +50,7 @@ void mostraMes(int numero)
         case 10: printf("outubro - 31 dias\n");   break;
         case 11: printf("novembro - 30 dias\n");  break;
         case 12: printf("dezembro - 31 dias\n");  break;
-        default: printf("Número inválido! Digite um valor de 1 a 12.\n");
+        default: printf("Numero invalido! Digite um valor de 1 a 12.\n");
     }
 }
 
@@ -59,13 +58,13 @@ void exercicio2()
 {
     int mes;
 
-    printf("Digite o número do mês (1 a 12): ");
+    printf("Digite o numero do mes (1 a 12): ");
     scanf("%d", &mes);
 
     mostraMes(mes);
 }
 
-/* EXERCÍCIO 3 - Converte Fahrenheit para Celsius */
+/* EXERCICIO 3 - Converte Fahrenheit para Celsius */
 float fahrenheitParaCelsius(float f)
 {
     float c;
@@ -80,10 +79,10 @@ void exercicio3()
     printf("Digite a temperatura em Fahrenheit: ");
     scanf("%f", &f);
 
-    printf("%.2f °F = %.2f °C\n", f, fahrenheitParaCelsius(f));
+    printf("%.2f F = %.2f C\n", f, fahrenheitParaCelsius(f));
 }
 
-/* EXERCÍCIO 4 - Volume do cilindro: V = PI * raio² * altura */
+/* EXERCICIO 4 - Volume do cilindro: V = PI * raio^2 * altura */
 float volumeCilindro(float altura, float raio)
 {
     float volume;
@@ -103,7 +102,7 @@ void exercicio4()
     printf("Volume do cilindro: %.2f\n", volumeCilindro(altura, raio));
 }
 
-/* EXERCÍCIO 5 - Volume da esfera: V = 4/3 * PI * raio³ */
+/* EXERCICIO 5 - Volume da esfera: V = 4/3 * PI * raio^3 */
 float volumeEsfera(float raio)
 {
     float volume;
@@ -121,32 +120,32 @@ void exercicio5()
     printf("Volume da esfera: %.2f\n", volumeEsfera(raio));
 }
 
-/* EXERCÍCIO 6 - Formas de pagamento */
+/* EXERCICIO 6 - Formas de pagamento */
 
-/* Imprime as opções, lê e retorna a opção escolhida */
+/* Imprime as opcoes, le e retorna a opcao escolhida */
 char escolheOpcao()
 {
     char opcao;
 
     printf("\nFORMAS DE PAGAMENTO\n");
-    printf("a) À vista com 10%% de desconto\n");
-    printf("b) Em duas vezes (preço da etiqueta)\n");
-    printf("c) De 3 até 10 vezes com 3%% de juros ao mês (compras acima de R$ 100,00)\n");
-    printf("Digite a opção desejada: ");
-    scanf(" %c", &opcao);   /* o espaço antes do %c ignora o ENTER anterior */
+    printf("a) A vista com 10%% de desconto\n");
+    printf("b) Em duas vezes (preco da etiqueta)\n");
+    printf("c) De 3 ate 10 vezes com 3%% de juros ao mes (compras acima de R$ 100,00)\n");
+    printf("Digite a opcao desejada: ");
+    scanf(" %c", &opcao);   /* o espaco antes do %c ignora o ENTER anterior */
 
     return opcao;
 }
 
-/* Opção a: à vista com 10% de desconto */
+/* Opcao a: a vista com 10% de desconto */
 void pagamentoAVista(float total)
 {
     float valorFinal;
     valorFinal = total - (total * 0.10);
-    printf("Valor à vista: R$ %.2f\n", valorFinal);
+    printf("Valor a vista: R$ %.2f\n", valorFinal);
 }
 
-/* Opção b: duas vezes sem juros */
+/* Opcao b: duas vezes sem juros */
 void pagamentoDuasVezes(float total)
 {
     float parcela;
@@ -155,7 +154,7 @@ void pagamentoDuasVezes(float total)
     printf("Valor total: R$ %.2f\n", total);
 }
 
-/* Opção c: de 3 a 10 vezes com 3% de juros ao mês */
+/* Opcao c: de 3 a 10 vezes com 3% de juros ao mes */
 void pagamentoParcelado(float total)
 {
     int vezes, i;
@@ -163,7 +162,7 @@ void pagamentoParcelado(float total)
 
     if (total <= 100)
     {
-        printf("Opção disponível somente para compras acima de R$ 100,00.\n");
+        printf("Opcao disponivel somente para compras acima de R$ 100,00.\n");
         return;
     }
 
@@ -172,11 +171,11 @@ void pagamentoParcelado(float total)
 
     if (vezes < 3 || vezes > 10)
     {
-        printf("Número de parcelas inválido!\n");
+        printf("Numero de parcelas invalido!\n");
         return;
     }
 
-    /* aplica 3% de juros para cada mês (juros compostos) */
+    /* aplica 3% de juros para cada mes (juros compostos) */
     totalComJuros = total;
     for (i = 1; i <= vezes; i++)
     {
@@ -206,19 +205,19 @@ void exercicio6()
     else if (opcao == 'c' || opcao == 'C')
         pagamentoParcelado(total);
     else
-        printf("Opção inválida!\n");
+        printf("Opcao invalida!\n");
 }
 
-/* EXERCÍCIO 7 - Locadora: 1 locação grátis a cada 15 filmes */
+/* EXERCICIO 7 - Locadora: 1 locacao gratis a cada 15 filmes */
 #define TAM_LOCADORA 500
 
-/* Recebe o vetor A e preenche o vetor B com as locações grátis */
+/* Recebe o vetor A e preenche o vetor B com as locacoes gratis */
 void calculaGratis(int A[], int B[])
 {
     int i;
     for (i = 0; i < TAM_LOCADORA; i++)
     {
-        B[i] = A[i] / 15;   /* divisão inteira */
+        B[i] = A[i] / 15;   /* divisao inteira */
     }
 }
 
@@ -227,8 +226,8 @@ void exercicio7()
     int A[TAM_LOCADORA], B[TAM_LOCADORA];
     int i;
 
-    /* Para testar, o vetor é preenchido com valores aleatórios (0 a 60),
-       já que digitar 500 valores seria inviável. */
+    /* Para testar, o vetor e preenchido com valores aleatorios (0 a 60),
+       ja que digitar 500 valores seria inviavel. */
     for (i = 0; i < TAM_LOCADORA; i++)
     {
         A[i] = rand() % 61;
@@ -239,18 +238,18 @@ void exercicio7()
     printf("Mostrando os 10 primeiros clientes:\n");
     for (i = 0; i < 10; i++)
     {
-        printf("Cliente %3d: %2d filmes -> %d locação(ões) grátis\n",
+        printf("Cliente %3d: %2d filmes -> %d locacao(oes) gratis\n",
                i + 1, A[i], B[i]);
     }
 }
 
-/* EXERCÍCIO 8 - Trocas na matriz 10x10 (no C os índices começam em 0: linha 2 = índice 1, etc.) */
+/* EXERCICIO 8 - Trocas na matriz 10x10 (no C os indices comecam em 0: linha 2 = indice 1, etc.) */
 void trocasMatriz(int A[10][10])
 {
     int i, aux;
     int auxVetor[10];
 
-    /* troca a linha 2 com a linha 8 (índices 1 e 7) */
+    /* troca a linha 2 com a linha 8 (indices 1 e 7) */
     for (i = 0; i < 10; i++)
     {
         aux = A[1][i];
@@ -258,7 +257,7 @@ void trocasMatriz(int A[10][10])
         A[7][i] = aux;
     }
 
-    /* troca a coluna 4 com a coluna 10 (índices 3 e 9) */
+    /* troca a coluna 4 com a coluna 10 (indices 3 e 9) */
     for (i = 0; i < 10; i++)
     {
         aux = A[i][3];
@@ -266,7 +265,7 @@ void trocasMatriz(int A[10][10])
         A[i][9] = aux;
     }
 
-    /* troca a diagonal principal com a secundária */
+    /* troca a diagonal principal com a secundaria */
     for (i = 0; i < 10; i++)
     {
         aux = A[i][i];
@@ -274,7 +273,7 @@ void trocasMatriz(int A[10][10])
         A[i][9 - i] = aux;
     }
 
-    /* troca a linha 5 com a coluna 10 (linha índice 4, coluna índice 9) */
+    /* troca a linha 5 com a coluna 10 (linha indice 4, coluna indice 9) */
     for (i = 0; i < 10; i++)
     {
         auxVetor[i] = A[4][i];      /* guarda a linha 5 */
@@ -307,7 +306,7 @@ void exercicio8()
     int A[10][10];
     int i, j;
 
-    /* preenche com valores fáceis de acompanhar: 11, 12, ... */
+    /* preenche com valores faceis de acompanhar: 11, 12, ... */
     for (i = 0; i < 10; i++)
     {
         for (j = 0; j < 10; j++)
@@ -325,7 +324,7 @@ void exercicio8()
     imprimeMatriz10(A);
 }
 
-/* EXERCÍCIO 9 - Matriz 61x10: soma das colunas na 61ª linha */
+/* EXERCICIO 9 - Matriz 61x10: soma das colunas na 61a linha */
 void somaColunas(int M[61][10])
 {
     int i, j, soma;
@@ -337,7 +336,7 @@ void somaColunas(int M[61][10])
         {
             soma = soma + M[i][j];
         }
-        M[60][j] = soma;   /* 61ª linha = índice 60 */
+        M[60][j] = soma;   /* 61a linha = indice 60 */
     }
 }
 
@@ -346,7 +345,7 @@ void exercicio9()
     int M[61][10];
     int i, j;
 
-    /* Para testar, as 60 primeiras linhas recebem valores aleatórios (0 a 9) */
+    /* Para testar, as 60 primeiras linhas recebem valores aleatorios (0 a 9) */
     for (i = 0; i < 60; i++)
     {
         for (j = 0; j < 10; j++)
@@ -357,14 +356,14 @@ void exercicio9()
 
     somaColunas(M);
 
-    printf("Soma de cada coluna (61ª linha da matriz):\n");
+    printf("Soma de cada coluna (61a linha da matriz):\n");
     for (j = 0; j < 10; j++)
     {
         printf("Coluna %2d: %d\n", j + 1, M[60][j]);
     }
 }
 
-/* EXERCÍCIO 10 - Idade em anos, meses e dias */
+/* EXERCICIO 10 - Idade em anos, meses e dias */
 int diasDoMes(int mes, int ano)
 {
     if (mes == 2)
@@ -399,7 +398,7 @@ void calculaIdade(int diaNasc, int mesNasc, int anoNasc)
     meses = mesAtual - mesNasc;
     dias  = diaAtual - diaNasc;
 
-    /* se os dias ficaram negativos, "pega emprestado" um mês */
+    /* se os dias ficaram negativos, "pega emprestado" um mes */
     if (dias < 0)
     {
         meses--;
@@ -426,7 +425,7 @@ void exercicio10()
 
     printf("Digite o dia de nascimento: ");
     scanf("%d", &dia);
-    printf("Digite o mês de nascimento: ");
+    printf("Digite o mes de nascimento: ");
     scanf("%d", &mes);
     printf("Digite o ano de nascimento: ");
     scanf("%d", &ano);
@@ -434,29 +433,28 @@ void exercicio10()
     calculaIdade(dia, mes, ano);
 }
 
-/* PROGRAMA PRINCIPAL - menu para testar os exercícios */
+/* PROGRAMA PRINCIPAL - menu para testar os exercicios */
 int main()
 {
     int opcao;
 
-    setlocale(LC_ALL, "Portuguese");
     srand(time(NULL));
 
     do
     {
-        printf("\nLISTA DE EXERCÍCIOS\n");
-        printf(" 1 - Maior de dois números\n");
-        printf(" 2 - Mês e quantidade de dias\n");
+        printf("\nLISTA DE EXERCICIOS\n");
+        printf(" 1 - Maior de dois numeros\n");
+        printf(" 2 - Mes e quantidade de dias\n");
         printf(" 3 - Fahrenheit para Celsius\n");
         printf(" 4 - Volume do cilindro\n");
         printf(" 5 - Volume da esfera\n");
         printf(" 6 - Formas de pagamento\n");
-        printf(" 7 - Locadora (locações grátis)\n");
+        printf(" 7 - Locadora (locacoes gratis)\n");
         printf(" 8 - Trocas na matriz 10x10\n");
         printf(" 9 - Soma das colunas (matriz 61x10)\n");
         printf("10 - Idade em anos, meses e dias\n");
         printf(" 0 - Sair\n");
-        printf("Escolha um exercício: ");
+        printf("Escolha um exercicio: ");
         scanf("%d", &opcao);
         printf("\n");
 
@@ -473,7 +471,7 @@ int main()
             case 9:  exercicio9();  break;
             case 10: exercicio10(); break;
             case 0:  printf("Encerrando...\n"); break;
-            default: printf("Opção inválida!\n");
+            default: printf("Opcao invalida!\n");
         }
     } while (opcao != 0);
 
